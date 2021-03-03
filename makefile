@@ -1,2 +1,2 @@
 clean:
-	rm html/* -rf
+	rm html -rf
