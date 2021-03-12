@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.9.1"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>egcl-ast: Table of Contents</title>
+		<title>ecgl-ast: RUG Compiler Construction - Shared Compiler</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
 					<tr style="height: 56px;">
 						<td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
 						<td id="projectalign" style="padding-left: 0.5em;">
-							<div id="projectname">egcl-ast
+							<div id="projectname">ecgl-ast
 								&#160;<span id="projectnumber">0.1</span>
 							</div>
 							<div id="projectbrief">the abstract syntax tree for EGCL</div>
@@ -66,62 +66,65 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Table of Contents </div>  </div>
+<div class="title">RUG Compiler Construction - Shared Compiler </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_src_readme"></a></p><ol type="1">
-<li><a href="#org6b6656a">FAST README</a></li>
-<li><a href="#orgf5fef85">Extensible Ast implementation</a><ol type="a">
-<li><a href="#org16f19b0">Tasks</a><ol type="i">
-<li><a href="#org7fd1509">Base class for ast node</a></li>
-<li><a href="#orgbe4b9d4">Computable interfaces</a></li>
-</ol>
-</li>
-<li><a href="#orgf70f224">Accumulators</a></li>
-</ol>
-</li>
-</ol>
-<p><a class="anchor" id="org6b6656a"></a></p>
+<div class="textblock"><p><a class="anchor" id="md_src_README"></a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-FAST README</h1>
-<p>The abstract idea of this codebase is that we can treat the node of this ast as a function (polymorphic function). Once we have this abstraction we can then reframe all the section of the compiler (e.g. semantic checking, generation etc.) to just a concatenation of all these functions. The crucial element that we still need though, is a stateful accumulator for this recursion. Given these two abstractions we can now generalized all the different part of the compiler into a recursion with a stateful accumulator. Finally, based on the type of accumulator we can differentiate the singular part. So for example the semantic checking will have a different type of accumulator then the one used by the generation.</p>
-<p>Implementation wise, the first abstraction is achieved through an interface and in order to have the possibility to dispatch on the type of the accumulator this interface is templated and it defines a virtual eval function (which takes an accumulator and returns an accumulator) for each type of stateful accumulator. Finally, the accumulator class is templated and it wraps a type. Therefore will be used for all the different section with different wrapped type. Lastly, there are some utils to carry out this recursion. They are referred to as transformers and they transform a sequence of computable. An example of that is the reducer which takes a sequence of computable and returns a single computable which is the composition of the initial sequence.</p>
-<p>This was the fast read me the following part will be the final readme but it's not complete yet! Lastly, I wrote some example nodes and some example on how to use this idea (i implemented just for a trivial printing operation!) I defined a <a class="el" href="classPprint.html">Pprint</a> type just to show what is needed in order to implement a struct/class which will behave as aspected when wrapped by an accumulator. The idea for the project, in general, is that we need to define the nodes that we have and then each group can do their task autonomously. The only thing that is need to perform a group task is to define a class/struct like <a class="el" href="classPprint.html">Pprint</a> and then overload for each node an eval function which takes an accumulator of the defined class/struct type.</p>
-<p><a class="anchor" id="orgf5fef85"></a></p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Extensible Ast implementation</h1>
-<p>This codebase defines a class hierarchy and a behavioural interface for the EGCL abstract syntax tree.</p>
-<p><a class="anchor" id="org16f19b0"></a></p>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Tasks</h2>
-<p>Once the ast is built several tasks can be carried out with it.</p>
-<ol type="1">
-<li>Print: pretty print the ast.</li>
-<li>Check: perform semantic checking on the ast.</li>
-<li>Emit: generate target language code for the ast.</li>
-</ol>
-<p>The fundamental idea is that each task involves traversing the ast carrying through a stateful accumulator.</p>
-<p>For example for pretty-printing the tree is traversed and a string representation is incrementally built, recursively appending the individual parts to an initially empty string.</p>
-<p>For semantic checking, the accumulator may be more complex than a string but the idea is the same: each node in the tree will recursively check its children and then check the the correctness of the specific semantics of its node type, while accumulating some descriptor that carries the necessary information to do the checking.</p>
-<p><a class="anchor" id="org7fd1509"></a></p>
-<h3><a class="anchor" id="autotoc_md4"></a>
-Base class for ast node</h3>
-<p>The base class <a class="el" href="classAstNode.html" title="AstNode base class for the ast nodes.">AstNode</a> is the starting point to build concrete ast nodes. Besides holding a protected <code>metadata</code> field it just serves as abstraction fan point for the rest of the nodes.</p>
-<p>Ideally, each concrete node type will provide its own implementation of each of the above tasks.</p>
-<p><a class="anchor" id="orgbe4b9d4"></a></p>
+Building the compiler</h1>
+<p>For now, it just is a parser which will either accept or reject the syntax.</p>
+<p>Run <code>make</code> or <code>make all</code> to build the parser. The binary is called <code>egclc</code>: 'Extended Guarded Command Language Compiler'.</p>
+<p>Whenever desired, run <code>make clean</code> to remove all intermediate build files.</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Dependencies</h2>
+<p>This project uses:</p><ul>
+<li><code>make</code> and <code>g++</code> which are available and pre-installed on most modern POSIX systems.</li>
+<li>the <code>LLnextgen</code> parser generator in combination with the <code>flex</code> lexer/scanner generator.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Testing</h1>
+<p>Run <code>make test</code> to build the parser in testing mode, and test all the examples in the <code>test/parsing</code> directory:</p>
+<ul>
+<li>Examples in the <code>expression</code> directory are expected to be parseable as an Expression.</li>
+<li>Examples in the <code>statement</code> directory are expected to be parseable as a single Statement.</li>
+<li>Examples in the <code>statements</code> directory are expected to be parseable as a sequence of one or multiple statements.</li>
+<li>Examples in the <code>program</code> directory are expected to be parseable as a full Program.</li>
+</ul>
+<p>This separation allows us to test parts of the parser/grammar independently, and create more concise examples for them.</p>
+<p>For each of these directories, there is a <code>./counterexample</code> subdirectory, whose contents will be expected to <b>be rejected</b> by the parser. This allows us to check whether the parser is strict enough. (And later on it could be extended to also test the semantic and typechecking passes after the parsing steps.)</p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Ast</h1>
+<p>In <em>src/ast</em> you can now find the code for the Abstract Syntax Tree.</p>
+<ul>
+<li><em>src/ast/node/abstract</em> contains the <code>Base</code> class and the <code>Concrete</code> templated class (no changes there).</li>
+<li><em>src/ast/node/concrete</em> contains all the header files *.hpp* for<ul>
+<li>Concrete struct definitions for the laguange nonterminals</li>
+<li>Concrete struct definitions for the language leaf node (atoms, <code>IntConstant</code>, <code>RealConstant</code>, <code>Identifier</code>).</li>
+<li>Intermediate struct definitions such as <code>Unary</code>, <code>Binary</code> or <code>Nary</code></li>
+<li>A file <code><a class="el" href="includes_8hpp.html">includes.hpp</a></code> which includes all of the above headers.</li>
+<li>A file <code><a class="el" href="node_8hpp.html">node.hpp</a></code> which includes the <code><a class="el" href="includes_8hpp.html">includes.hpp</a></code> and creates the <code>std::variant&lt;...&gt;</code> with all of the concrete types.</li>
+</ul>
+</li>
+<li><em><a class="el" href="ast_8hpp.html">src/ast/ast.hpp</a></em> which as the initial implementation just includes <code><a class="el" href="node_8hpp.html">node.hpp</a></code></li>
+<li><em><a class="el" href="ast_2visitor_8hpp.html">src/ast/visitor.hpp</a></em> which is the abstract implementation of the visitor pattern and should be included and extended in each of its concrete implementation.</li>
+</ul>
+<p>In <em>src</em> there is also the examples made in the initial implementation of printing (i.e. <em>printing/</em>) and code generating (i.e. <em>codegen/</em>).</p>
+<p>Please note that some of the nonterminals may eventually result superfluous, and some more intermediate classes could be added if needed.</p>
+<p>Compilation is still the same as explained above: <code>make</code> or <code>make test</code>.</p>
 <h3><a class="anchor" id="autotoc_md5"></a>
-Computable interfaces</h3>
-<p>For each of these tasks, an abstract class (interface) is defined via the <code><a class="el" href="classComputable.html" title="Templated class to extend when defining a task interface.">Computable</a></code> template that establishes the specific type of accumulator for the task, and leaves to concrete classes the implementation of the eval() method.</p>
-<p>For example: </p><pre class="fragment">// shortcut for Computable&lt;string&gt;, that is it accumulates string, e.g. for
-// pretty printing
-class Printable : public Computable&lt;Pprint&gt; {};
-</pre><p> defines the Printable interface as something that will produce a string.</p>
-<p>Similarly if semantic::CheckerState is a class maintaining the state of the semantic checker appropriately implemented: </p><pre class="fragment">class Checkable : public Computable&lt;semantic::CheckerState&gt; {};
-</pre><p> would be the definition of the interface for nodes whose semantics can be checked.</p>
-<p>TODO</p>
-<p><a class="anchor" id="orgf70f224"></a></p>
-<h2><a class="anchor" id="autotoc_md6"></a>
-Accumulators</h2>
+note</h3>
+<p>When implementing a task such as code-generation or semantic checking, the code boils down to defining the overload for the visitor of that task. It is important to remeber that at the visitior must be able to match each and every concrete class, either directly or by handling one of its superclasses.</p>
+<p>As an example take the semantic cheking of an expression: every binary arithmentic expression will be handled that same way so probably it's enough to define the overload for an ancestory like <code>BinaryExpression</code> instead of each concrete.</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Wip compiler codebase documentation</h1>
+<ul>
+<li><a href="https://rug-compiler-construction.github.io/html/classAstNode.html">https://rug-compiler-construction.github.io/html/classAstNode.html</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Doxygen syntax cheatsheet</h1>
+<ul>
+<li><a href="https://github.com/RUG-Compiler-Construction/compiler/blob/abstract_ast/src/abs_ast/resources/docmeta.org">https://github.com/RUG-Compiler-Construction/compiler/blob/abstract_ast/src/abs_ast/resources/docmeta.org</a> </li>
+</ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

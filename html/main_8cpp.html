@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.9.1"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>egcl-ast: src/main.cpp File Reference</title>
+		<title>ecgl-ast: src/main.cpp File Reference</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
 					<tr style="height: 56px;">
 						<td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
 						<td id="projectalign" style="padding-left: 0.5em;">
-							<div id="projectname">egcl-ast
+							<div id="projectname">ecgl-ast
 								&#160;<span id="projectnumber">0.1</span>
 							</div>
 							<div id="projectbrief">the abstract syntax tree for EGCL</div>
@@ -70,39 +70,40 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">main.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="prettyprint_2state_8hpp_source.html">prettyprint/state.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="accumulator_8hpp_source.html">accumulator/accumulator.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="abstractast_8hpp_source.html">abstractast.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="binary__node_2import_8hpp_source.html">nodes/binary_node/import.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="fun__def_2import_8hpp_source.html">nodes/fun_def/import.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="nary__node_2import_8hpp_source.html">nodes/nary_node/import.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="value__node_8hpp_source.html">nodes/value_node/value_node.hpp</a>&quot;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ast_8hpp_source.html">ast/ast.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="egcl_8h_source.html">parsing/egcl.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a88e87de7ba6d4d20db3f2bd4d5c277b3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a88e87de7ba6d4d20db3f2bd4d5c277b3"><td class="memTemplItemLeft" align="right" valign="top">shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a> (T el)</td></tr>
-<tr class="separator:a88e87de7ba6d4d20db3f2bd4d5c277b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd6a35524d7783285dd4f41f813d613b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#acd6a35524d7783285dd4f41f813d613b">EGCLParser</a> ()</td></tr>
+<tr class="separator:acd6a35524d7783285dd4f41f813d613b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a87a127afa8f6c307fbfba10390675406"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a87a127afa8f6c307fbfba10390675406">yyin</a> = NULL</td></tr>
+<tr class="separator:a87a127afa8f6c307fbfba10390675406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+<a id="acd6a35524d7783285dd4f41f813d613b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd6a35524d7783285dd4f41f813d613b">&#9670;&nbsp;</a></span>EGCLParser()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int main </td>
+          <td class="memname">int EGCLParser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -110,70 +111,114 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00021">21</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;           {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classPprint.html">Pprint</a> state;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classAccumulator.html">Accumulator&lt;Pprint&gt;</a> acc(state);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classLeafNode.html">IdentifierNode</a> a(<span class="stringliteral">&quot;b&quot;</span>s);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classLeafNode.html">IdentifierNode</a> b(<span class="stringliteral">&quot;a&quot;</span>s);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classLeafNode.html">IdentifierNode</a> d(<span class="stringliteral">&quot;d&quot;</span>s);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classLeafNode.html">LeafNode&lt;int&gt;</a> c(1);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classBinaryNode.html">BinaryNode</a> bin(<span class="stringliteral">&quot;+&quot;</span>, <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(a), <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(b));</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classBinaryNode.html">BinaryNode</a> bin2(<span class="stringliteral">&quot;-&quot;</span>, <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(c), <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(d));</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classVarNode.html">VarNode</a> var(</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      vector&lt;PastNode&gt;({<a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(a), <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(b)}),</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      vector&lt;PastNode&gt;({<a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(bin), <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(c)}));</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classLeafNode.html">IdentifierNode</a> func_name(<span class="stringliteral">&quot;bar&quot;</span>s);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classLeafNode.html">IdentifierNode</a> arg_0(<span class="stringliteral">&quot;x&quot;</span>s);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classLeafNode.html">IdentifierNode</a> some_ret_type(<span class="stringliteral">&quot;int&quot;</span>s);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classArglist.html">Arglist</a> some_args({<a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(arg_0)});</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classBlock.html">Block</a> some_block({<a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(var), <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(bin)});</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classBlock.html">Block</a> some_block2({<a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(var), <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(some_block)});</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classFuncdef.html">Funcdef</a> some_fn(<a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(func_name), <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(some_args), <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(some_ret_type), <a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(some_block));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  cout</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      &lt;&lt; acc(<a class="code" href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a>(some_fn));</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// cout &lt;&lt; acc.getVal();</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="ttc" id="aclassAccumulator_html"><div class="ttname"><a href="classAccumulator.html">Accumulator</a></div><div class="ttdoc">A wrapper class to accumulate a value of type T.</div><div class="ttdef"><b>Definition:</b> <a href="accumulator_8hpp_source.html#l00016">accumulator.hpp:16</a></div></div>
-<div class="ttc" id="aclassArglist_html"><div class="ttname"><a href="classArglist.html">Arglist</a></div><div class="ttdef"><b>Definition:</b> <a href="arglist_8hpp_source.html#l00005">arglist.hpp:5</a></div></div>
-<div class="ttc" id="aclassBinaryNode_html"><div class="ttname"><a href="classBinaryNode.html">BinaryNode</a></div><div class="ttdef"><b>Definition:</b> <a href="binary__node_8hpp_source.html#l00005">binary_node.hpp:5</a></div></div>
-<div class="ttc" id="aclassBlock_html"><div class="ttname"><a href="classBlock.html">Block</a></div><div class="ttdef"><b>Definition:</b> <a href="block__code_8hpp_source.html#l00005">block_code.hpp:5</a></div></div>
-<div class="ttc" id="aclassFuncdef_html"><div class="ttname"><a href="classFuncdef.html">Funcdef</a></div><div class="ttdef"><b>Definition:</b> <a href="fun__def_8hpp_source.html#l00007">fun_def.hpp:7</a></div></div>
-<div class="ttc" id="aclassLeafNode_html"><div class="ttname"><a href="classLeafNode.html">LeafNode</a></div><div class="ttdef"><b>Definition:</b> <a href="value__node_8hpp_source.html#l00009">value_node.hpp:9</a></div></div>
-<div class="ttc" id="aclassPprint_html"><div class="ttname"><a href="classPprint.html">Pprint</a></div><div class="ttdef"><b>Definition:</b> <a href="prettyprint_2state_8hpp_source.html#l00006">state.hpp:6</a></div></div>
-<div class="ttc" id="aclassVarNode_html"><div class="ttname"><a href="classVarNode.html">VarNode</a></div><div class="ttdef"><b>Definition:</b> <a href="nary__node_8hpp_source.html#l00015">nary_node.hpp:15</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a88e87de7ba6d4d20db3f2bd4d5c277b3"><div class="ttname"><a href="main_8cpp.html#a88e87de7ba6d4d20db3f2bd4d5c277b3">make_s</a></div><div class="ttdeci">shared_ptr&lt; T &gt; make_s(T el)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00016">main.cpp:16</a></div></div>
+<p class="definition">Definition at line <a class="el" href="egcl_8cpp_source.html#l01519">1519</a> of file <a class="el" href="egcl_8cpp_source.html">egcl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;                     {</div>
+<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;<span class="keywordtype">int</span> LLsetjmpRetval;</div>
+<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;    memset(<a class="code" href="egcl_8cpp.html#a744a3b140f32cc1aa23f9088fa1cc99f">LLscnt</a>, 0, <a class="code" href="egcl_8cpp.html#abe062d48ec6fd5794e8700c993c5faf4">LL_NSETS</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;    memset(<a class="code" href="egcl_8cpp.html#a290b456a40904058382887d3929264bf">LLtcnt</a>, 0, <a class="code" href="egcl_8cpp.html#aaf15667b80388d91a20fc7e155f5ef58">LL_NTERMINALS</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;    <a class="code" href="egcl_8cpp.html#a290b456a40904058382887d3929264bf">LLtcnt</a>[0]++;</div>
+<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;    <a class="code" href="egcl_8cpp.html#abc6c8ccb14937ac2a44b4d432adfbcbb">LLsymb</a> = 0;</div>
+<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;    <a class="code" href="egcl_8cpp.html#a4dea47527f5ffbbf390ef6b95f631874">LLreissue</a> = -2 <span class="comment">/* LL_NEW_TOKEN */</span>;</div>
+<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;    LLsetjmpRetval = setjmp(<a class="code" href="egcl_8cpp.html#a2cd7de94363ff64afbe6c903a67e48c6">LLjmp_buf</a>);</div>
+<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;    <span class="keywordflow">if</span> (LLsetjmpRetval == 0) {</div>
+<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;    <a class="code" href="egcl_8cpp.html#af5200e9d4f7f45404500057fcbf1d1d9">LLread</a>();</div>
+<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;    <a class="code" href="egcl_8cpp.html#a0c6b8621a3fa2c20a2ab33296e924b3c">LL0_Program</a>();</div>
+<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="egcl_8cpp.html#a2d04dcbd3b1fc196e42a43530a313c21">LLcsymb</a> != 0) <a class="code" href="egcl_8cpp.html#ae15af91e16fe94785cd19071eba7cbc6">LLerror</a>(256 <span class="comment">/* EOFILE*/</span>);</div>
+<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;    }</div>
+<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;    <span class="keywordflow">return</span> LLsetjmpRetval;</div>
+<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;}</div>
+<div class="ttc" id="aegcl_8cpp_html_a0c6b8621a3fa2c20a2ab33296e924b3c"><div class="ttname"><a href="egcl_8cpp.html#a0c6b8621a3fa2c20a2ab33296e924b3c">LL0_Program</a></div><div class="ttdeci">static void LL0_Program(void)</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00261">egcl.cpp:261</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_a290b456a40904058382887d3929264bf"><div class="ttname"><a href="egcl_8cpp.html#a290b456a40904058382887d3929264bf">LLtcnt</a></div><div class="ttdeci">static int LLtcnt[LL_NTERMINALS]</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00007">egcl.cpp:7</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_a2cd7de94363ff64afbe6c903a67e48c6"><div class="ttname"><a href="egcl_8cpp.html#a2cd7de94363ff64afbe6c903a67e48c6">LLjmp_buf</a></div><div class="ttdeci">static jmp_buf LLjmp_buf</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00120">egcl.cpp:120</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_a2d04dcbd3b1fc196e42a43530a313c21"><div class="ttname"><a href="egcl_8cpp.html#a2d04dcbd3b1fc196e42a43530a313c21">LLcsymb</a></div><div class="ttdeci">static int LLcsymb</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00008">egcl.cpp:8</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_a4dea47527f5ffbbf390ef6b95f631874"><div class="ttname"><a href="egcl_8cpp.html#a4dea47527f5ffbbf390ef6b95f631874">LLreissue</a></div><div class="ttdeci">static int LLreissue</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00076">egcl.cpp:76</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_a744a3b140f32cc1aa23f9088fa1cc99f"><div class="ttname"><a href="egcl_8cpp.html#a744a3b140f32cc1aa23f9088fa1cc99f">LLscnt</a></div><div class="ttdeci">static int LLscnt[LL_NSETS+1]</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00007">egcl.cpp:7</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_aaf15667b80388d91a20fc7e155f5ef58"><div class="ttname"><a href="egcl_8cpp.html#aaf15667b80388d91a20fc7e155f5ef58">LL_NTERMINALS</a></div><div class="ttdeci">#define LL_NTERMINALS</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00002">egcl.cpp:2</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_abc6c8ccb14937ac2a44b4d432adfbcbb"><div class="ttname"><a href="egcl_8cpp.html#abc6c8ccb14937ac2a44b4d432adfbcbb">LLsymb</a></div><div class="ttdeci">int LLsymb</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00075">egcl.cpp:75</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_abe062d48ec6fd5794e8700c993c5faf4"><div class="ttname"><a href="egcl_8cpp.html#abe062d48ec6fd5794e8700c993c5faf4">LL_NSETS</a></div><div class="ttdeci">#define LL_NSETS</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00003">egcl.cpp:3</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_ae15af91e16fe94785cd19071eba7cbc6"><div class="ttname"><a href="egcl_8cpp.html#ae15af91e16fe94785cd19071eba7cbc6">LLerror</a></div><div class="ttdeci">static void LLerror(int LLtoken)</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00108">egcl.cpp:108</a></div></div>
+<div class="ttc" id="aegcl_8cpp_html_af5200e9d4f7f45404500057fcbf1d1d9"><div class="ttname"><a href="egcl_8cpp.html#af5200e9d4f7f45404500057fcbf1d1d9">LLread</a></div><div class="ttdeci">static void LLread(void)</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l00088">egcl.cpp:88</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a88e87de7ba6d4d20db3f2bd4d5c277b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88e87de7ba6d4d20db3f2bd4d5c277b3">&#9670;&nbsp;</a></span>make_s()</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">shared_ptr&lt;T&gt; make_s </td>
+          <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>el</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00016">16</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                           {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">return</span> make_shared&lt;T&gt;(el);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00012">12</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                 {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  FILE *fileHandle = NULL;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (argc &gt; 2) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Usage: %s [filename.egcl]\n&quot;</span>, argv[0]);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">if</span> (argc == 2) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    fileHandle = fopen(argv[1], <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="main_8cpp.html#a87a127afa8f6c307fbfba10390675406">yyin</a> = fileHandle;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8cpp.html#a87a127afa8f6c307fbfba10390675406">yyin</a> == NULL) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      fprintf(stderr, <span class="stringliteral">&quot;%s: failed to open file\n&quot;</span>, argv[0]);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  printf(<span class="stringliteral">&quot;Extended Guard Language Compiler.\n&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">int</span> verdict = <a class="code" href="main_8cpp.html#acd6a35524d7783285dd4f41f813d613b">EGCLParser</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (fileHandle) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    fclose(fileHandle);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> verdict;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="ttc" id="amain_8cpp_html_a87a127afa8f6c307fbfba10390675406"><div class="ttname"><a href="main_8cpp.html#a87a127afa8f6c307fbfba10390675406">yyin</a></div><div class="ttdeci">FILE * yyin</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8lex_8cpp_source.html#l00347">egcl.lex.cpp:347</a></div></div>
+<div class="ttc" id="amain_8cpp_html_acd6a35524d7783285dd4f41f813d613b"><div class="ttname"><a href="main_8cpp.html#acd6a35524d7783285dd4f41f813d613b">EGCLParser</a></div><div class="ttdeci">int EGCLParser()</div><div class="ttdef"><b>Definition:</b> <a href="egcl_8cpp_source.html#l01519">egcl.cpp:1519</a></div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a87a127afa8f6c307fbfba10390675406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a127afa8f6c307fbfba10390675406">&#9670;&nbsp;</a></span>yyin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE * yyin = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="egcl_8lex_8cpp_source.html#l00347">347</a> of file <a class="el" href="egcl_8lex_8cpp_source.html">egcl.lex.cpp</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

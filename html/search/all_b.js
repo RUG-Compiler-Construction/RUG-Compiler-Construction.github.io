@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['pastnode_49',['PastNode',['../transformer_8hpp.html#a8e4ff20c24e5702f906080570c1a9017',1,'PastNode():&#160;transformer.hpp'],['../transignature_8hpp.html#a8e4ff20c24e5702f906080570c1a9017',1,'PastNode():&#160;transignature.hpp']]],
-  ['pcomp_50',['Pcomp',['../interfaces_8hpp.html#ac9839352367ad3eeae82bbb8cd387920',1,'interfaces.hpp']]],
-  ['pprint_51',['Pprint',['../classPprint.html',1,'Pprint'],['../classPprint.html#ac4685ba44fcba94a04fa5db150b0cc05',1,'Pprint::Pprint()'],['../classPprint.html#a731dcbf1f73bb05a7be2c2a08cc7b905',1,'Pprint::Pprint(std::string el)']]],
-  ['print_2ehpp_52',['print.hpp',['../arglist_2print_8hpp.html',1,'(Global Namespace)'],['../binary__node_2print_8hpp.html',1,'(Global Namespace)'],['../block__code_2print_8hpp.html',1,'(Global Namespace)'],['../fun__def_2print_8hpp.html',1,'(Global Namespace)'],['../nary__node_2print_8hpp.html',1,'(Global Namespace)'],['../value__node_2print_8hpp.html',1,'(Global Namespace)']]],
-  ['printable_53',['Printable',['../abstractast_8hpp.html#ad9862c8ab7367956fbb4319f9df91735',1,'abstractast.hpp']]]
+  ['od_273',['OD',['../egcl_8h.html#a059795bf8344b150ae0fcb015d65aaa5',1,'egcl.h']]],
+  ['operator_2b_274',['operator+',['../metadata_8cpp.html#a5802d7495bbd84caaa33e367eae80ecf',1,'operator+(Metadata &amp;lhs, Metadata &amp;rhs):&#160;metadata.cpp'],['../metadata_8hpp.html#a5802d7495bbd84caaa33e367eae80ecf',1,'operator+(Metadata &amp;lhs, Metadata &amp;rhs):&#160;metadata.cpp'],['../src__info_8cpp.html#a7b2ec0472169b8bca9e6afba83672b5e',1,'operator+(SrcInfo &amp;lhs, SrcInfo &amp;rhs):&#160;src_info.cpp'],['../src__info_8hpp.html#a7b2ec0472169b8bca9e6afba83672b5e',1,'operator+(SrcInfo &amp;lhs, SrcInfo &amp;rhs):&#160;src_info.cpp']]],
+  ['operator_3c_3c_275',['operator&lt;&lt;',['../metadata_8cpp.html#a4101407e26c25e7b0840f5860ec3ebef',1,'operator&lt;&lt;(std::ostream &amp;out, Metadata &amp;token):&#160;metadata.cpp'],['../metadata_8hpp.html#a4101407e26c25e7b0840f5860ec3ebef',1,'operator&lt;&lt;(std::ostream &amp;out, Metadata &amp;token):&#160;metadata.cpp']]],
+  ['or_276',['Or',['../structAst_1_1Node_1_1Or.html',1,'Ast::Node']]],
+  ['or_277',['OR',['../egcl_8h.html#a3363ca4d6d3cc0230b2804280591c991',1,'egcl.h']]],
+  ['or_2ehpp_278',['or.hpp',['../or_8hpp.html',1,'']]],
+  ['out_279',['out',['../classCodegenVisitor.html#af2bafbd0c5a13f62a5a50e0749f4ff9a',1,'CodegenVisitor']]],
+  ['shared_5fptr_3c_20astnode_20_3e_280',['shared_ptr&lt; AstNode &gt;',['../structAst_1_1Node_1_1Concrete.html#a5472ee8a9217977b0ae9846745d37d10',1,'Ast::Node::Concrete']]]
 ];

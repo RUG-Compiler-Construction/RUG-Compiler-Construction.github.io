@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['identifiernode_154',['IdentifierNode',['../value__node_8hpp.html#ab78b0b3754b3c40891d85749268c5788',1,'value_node.hpp']]]
+  ['string_870',['String',['../metadata_8hpp.html#a5573b97b9e5129f61d289e037d7e806c',1,'metadata.hpp']]]
 ];
